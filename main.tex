@@ -1,0 +1,121 @@
+\documentclass[a4paper,10pt]{scrreprt}
+\usepackage[inner= 2cm,outer = 2cm, bottom = 2.5cm,top=2cm , twoside]{geometry}
+%\usepackage[onehalfspacing]{setspace}
+% ============= Packages =============
+\usepackage{tabularx}
+% Dokumentinformationen
+\usepackage[
+	pdftitle={Microwave measurements},
+	pdfsubject={},
+	pdfauthor={Richard Nacke, Alexander Hohle,Hannes Wöffen},
+	pdfkeywords={},	
+	%Links nicht einrahmen
+	hidelinks
+]{hyperref}
+
+% Standard Packages
+%\usepackage{url}
+%\usepackage[utf8]{inputenc}
+\usepackage{doi}
+\usepackage{pdflscape}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx, subfig}
+\graphicspath{{img/}}
+\usepackage{fancyhdr}
+\usepackage{lmodern}
+\usepackage{color}
+\bibliographystyle{unsrt}
+%\bibliographystyle{plain}
+% zusätzliche Schriftzeichen der American Mathematical Society
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\newcommand{\RM}[1]{\MakeUppercase{\romannumeral #1{.}}}
+\newcommand{\mycmd}[1]{\mathsf{#1}}
+%nicht einrücken nach Absatz
+%\setlength{\parindent}{0pt}
+\usepackage{siunitx} 
+%\sisetup{locale = Eng}  
+\usepackage{colortbl}
+\usepackage{multirow} 
+\usepackage{csvsimple}
+\usepackage{color}
+% ============= Kopf- und Fußzeile =============
+\pagestyle{fancy}
+%
+\lhead{}
+\chead{}
+\rhead{\slshape \leftmark}
+%%
+\lfoot{}
+\cfoot{\thepage}
+\rfoot{}
+%%
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% ============= Package Einstellungen & Sonstiges ============= 
+%Besondere Trennungen
+\hyphenation{De-zi-mal-tren-nung}
+\usepackage{hyperref}
+
+
+\title{Microwave measurements\\ An advanced physics lab experiment - M6}
+\author{Group N2\\\\ Richard Nacke, Alexander Hohle, Hannes Wöffen}
+\date{May 2021}
+
+\begin{document}
+    \maketitle
+    
+    \tableofcontents
+
+    \pagenumbering{arabic}
+    \newpage
+    
+    \include{Glossary}
+    \newpage
+    
+    \chapter{Introduction}
+        In the microwave experiment M6, the main goal was to characterise different microwave components, such as coaxial cables, low pass filter or tank circuits. The measurement were done with a Vector Network Analyzer (VNA) which measure the Scattering Parameters also called S-parameters. With these parameters a full characterization of the microwave components is done, because these directly correspond to the transmission and the reflection attached to the impedance of the used componends. In the following equation (\ref{ref_and_trans}) \cite{Instruction_experiment_M6} the dependens of the impedance with the Reflection and Transmission coefficent is shown:\\
+        \begin{equation}
+            R(\omega)\,=\,\frac{Z_A\,-\,Z_L}{Z_a\,+\,Z_L}\,\,and\,\,T(\omega)\,=\,1\,+R(\omega)\,=\,\frac{2\cdot Z_A}{Z_L\,+\,Z_A}
+            \label{ref_and_trans}
+        \end{equation}
+        $Z_A$ stands here for the total impedance and $Z_L$ for the transmission line impedance.\\
+        The VNA measures the absolute value of gain or loss and the corresponding phase. In addition to the reflection and transmission coefficent a third quantity, the voltage standing wave ration (VSWR) , is considered. In the following equation (\ref{VSWR}) \cite{Instruction_experiment_M6} is shown:\\
+        \begin{equation}
+            VSWR\,=\,\frac{1\,+\,|R|}{1\,-\,|R|}
+            \label{VSWR}
+        \end{equation}
+        In the next chapters, where the differnt microwave components are characterized, the implementation is not described because due to the current situation the execution on place was not possible. A detailed describtion of the execution is find in the instruction of the microwave experiment \cite{Instruction_experiment_M6}.
+    
+    \newpage
+    
+    \chapter{Characterization of different Coaxial Cabels}
+    \newpage
+    
+    \chapter{Characterization of a Low-pass Filter}
+    \newpage
+    
+    \chapter{Characterization of a Directional Coupler}
+    \newpage
+    
+    \chapter{Characterization of an Amplifier}
+    \newpage
+    
+    \chapter{Characterization of an LC-Resonator}
+    \newpage
+    
+    \chapter{LC-Resonator measurements in a low-noise setup}
+    \newpage
+    
+    \chapter{Conclusion}
+    \newpage
+    
+    \chapter{Appendix}
+    
+%Literaturverzeichnis
+\backmatter  
+\bibliography{References}
+
+\end{document}
